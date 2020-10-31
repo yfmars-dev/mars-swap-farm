@@ -7,7 +7,7 @@ import "https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/BEP20.
 import "./MarsToken.sol";
 
 // yfMarsBar with Governance.
-contract yfMarsBar is BEP20('yfMarsBar Token', 'YFMR') {
+contract yfMarsBar is BEP20('yfMars Token', 'YFMR') {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
