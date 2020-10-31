@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 // COPIED FROM https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorAlpha.sol
 // Copyright 2020 Compound Labs, Inc.
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -12,7 +14,7 @@
 pragma solidity 0.6.12;
 
 // XXX: import "./SafeMath.sol";
-import "@yfmars-dev/mars-swap-lib/contracts/math/SafeMath.sol";
+import "https://github.com/yfmars-dev/mars-swap-lib/contracts/math/SafeMath.sol";
 
 contract Timelock {
     using SafeMath for uint;
@@ -117,7 +119,7 @@ contract Timelock {
         }
 
         // solium-disable-next-line security/no-call-value
-        (bool success, bytes memory returnData) = target.call.value(value)(callData);
+        (bool success, bytes memory returnData) = target.call{value:value}(callData);
         require(success, "Timelock::executeTransaction: Transaction execution reverted.");
 
         emit ExecuteTransaction(txHash, target, value, signature, data, eta);

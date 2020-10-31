@@ -1,8 +1,10 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 pragma solidity 0.6.12;
 
-import '@yfmars-dev/mars-swap-lib/contracts/token/BEP20/IBEP20.sol';
-import '@yfmars-dev/mars-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
-import '@yfmars-dev/mars-swap-lib/contracts/access/Ownable.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/IBEP20.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/access/Ownable.sol';
 
 import './MasterChef.sol';
 
@@ -58,10 +60,10 @@ contract LotteryRewardPool is Ownable {
     }
 
     // EMERGENCY ONLY.
-    function emergencyWithdraw(IBEP20 _token, uint256 _amount) external onlyOwner {
-        mars.safeTransfer(address(msg.sender), _amount);
-        emit EmergencyWithdraw(msg.sender, _amount);
-    }
+    // function emergencyWithdraw(IBEP20 _token, uint256 _amount) external onlyOwner {
+    //    mars.safeTransfer(address(msg.sender), _amount);
+    //    emit EmergencyWithdraw(msg.sender, _amount);
+    //}
 
     function setAdmin(address _admin) external onlyOwner {
         adminAddress = _admin;

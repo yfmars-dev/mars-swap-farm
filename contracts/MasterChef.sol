@@ -1,9 +1,11 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 pragma solidity 0.6.12;
 
-import '@yfmars-dev/mars-swap-lib/contracts/math/SafeMath.sol';
-import '@yfmars-dev/mars-swap-lib/contracts/token/BEP20/IBEP20.sol';
-import '@yfmars-dev/mars-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
-import '@yfmars-dev/mars-swap-lib/contracts/access/Ownable.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/math/SafeMath.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/IBEP20.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
+import 'https://github.com/yfmars-dev/mars-swap-lib/contracts/access/Ownable.sol';
 
 import "./MarsToken.sol";
 import "./yfMarsBar.sol";

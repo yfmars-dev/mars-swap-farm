@@ -1,6 +1,8 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 pragma solidity 0.6.12;
 
-import "@yfmars-dev/mars-swap-lib/contracts/token/BEP20/BEP20.sol";
+import "https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/BEP20.sol";
 
 // MarsToken with Governance.
 contract MarsToken is BEP20('Mars Token', 'Mars') {
@@ -16,7 +18,7 @@ contract MarsToken is BEP20('Mars Token', 'Mars') {
     // Which is copied and modified from COMPOUND:
     // https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/Comp.sol
 
-    /// @notice A record of each accounts delegate
+    // @notice A record of each accounts delegate
     mapping (address => address) internal _delegates;
 
     /// @notice A checkpoint for marking number of votes from a given block

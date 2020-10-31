@@ -1,6 +1,8 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 pragma solidity 0.6.12;
 
-import "@yfmars-dev/mars-swap-lib/contracts/token/BEP20/BEP20.sol";
+import "https://github.com/yfmars-dev/mars-swap-lib/contracts/token/BEP20/BEP20.sol";
 
 contract MockBEP20 is BEP20 {
     constructor(
